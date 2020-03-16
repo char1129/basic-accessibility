@@ -3,44 +3,64 @@
 <head>
   <meta charset="utf-8">
   <title>Basic Accessibility</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/modules.css" rel="stylesheet">
 </head>
 
-  <body>
+<body>
 
-    <ul class="skip-links">
-      <li><a href="#main">Jump to main content</a></li>
-      <li><a href="#nav">Jump to navigation</a></li>
-    </ul>
+  <ul class="skip-links">
+    <li><a href="#main">Jump to main content</a></li>
+    <li><a href="#nav">Jump to navigation</a></li>
+  </ul>
 
-    <header role="banner">
-      <h1>Pangolin</h1>
-      <nav role="navigation">
-        <ul role="navigation" id="nav" tabindex="0">
-          <li><a href="#">Description</a></li>
-          <li><a href="#">Behaviour</a></li>
-          <li><a href="#">Conservation</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header role="banner">
+    <h1>Pangolin</h1>
+    <nav role="navigation" id="nav" tabindex="0">
+      <ul>
+        <li><a href="#">Description</a></li>
+        <li><a href="#">Behaviour</a></li>
+        <li><a href="#">Conservation</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main role="main" id="main" tabindex="0">
-      <section id="description">
-        <h2>Description</h2>
-      </section>
+  <main role="main" id="main" tabindex="0">
+    <img src="images/mpap.jpg" alt="" aria-details="countries">
+    <section id="description">
+      <h2>Description</h2>
 
-      <section id="behaviour" tabindex="0">
-        <h2>Behaviour</h2>
-      </section>
+      <div id="countries">
+        <h3>Some countries where pangolins are found</h3>
+        <ol>
+          <li>Botswana</li>
+          <li>Kenya</li>
+          <li>Mozambique</li>
+          <li>Namibia</li>
+          <li>South Africa</li>
+          <li>Tanzania</li>
+          <li>Uganda</li>
+          <li>Zambia</li>
+          <li>Zimbabwe</li>
+        </ol>
+      </div>
 
-      <section id="conservation" tabindex="0">
-        <h2>Concervation</h2>
-      </section>
-    </main>
+    </section>
 
-    <footer role="contentinfos">
-      <small>© 1821 Pangolin</small>
-    </footer>
+    <section id="behaviour" tabindex="0">
+      <h2>Behaviour</h2>
+      <a href="https://en.wikipedia.org/wiki/Pangolin#Behavior" aria-label="Read more about Pangolin behaviour">Read more</a>
+    </section>
 
-  </body>
+    <section id="conservation" tabindex="0">
+      <h2>Conservation</h2>
+      <a href="https://en.wikipedia.org/wiki/Pangolin#Conservation" aria-label="Read more about Pangolin conservation">Read more</a>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <small>© 1821 Pangolin</small>
+  </footer>
+
+</body>
 </html>
